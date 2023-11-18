@@ -1,0 +1,43 @@
+.tags-block {
+  padding: 9px 10px;
+}
+
+.tags__block-wrapper {
+  @media(min-width: 940px) {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.tags__list {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @media(min-width: 400px) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @media(min-width: $tablet-width) {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @media(min-width: $desktop-width) {
+    grid-template-columns: repeat(6, auto);
+  }
+}
+
+.tags__item {
+  padding: 13px 35px;
+  gap: 21px;
+  flex-grow: 1;
+  color: $tagsColor;
+  font-family: "Lora", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  text-align: center;
+}
