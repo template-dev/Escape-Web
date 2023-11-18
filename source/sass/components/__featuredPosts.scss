@@ -1,0 +1,137 @@
+.featured-posts {
+  background-color: $featuredPostsBg;
+}
+
+.featured-wrapper {
+  padding: 60px 10px 0 10px;
+
+  hr {
+    width: 188px;
+  }
+
+  @media(min-width: $tablet-width) {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.posts__title {
+  color: $postsTitleColor;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 135% */
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.posts__list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  gap: 20px;
+
+  @media(min-width: $tablet-width) {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+.post__link {
+  padding: 0;
+  margin: 0;
+  max-width: 460px;
+  width: 100%;
+  transition: 0.3s;
+  position: relative;
+
+  figure {
+    margin: 0;
+    max-width: 460px;
+    width: 100%;
+    max-height: 280px;
+    height: 100%;
+    transition: 0.3s;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    figure {
+      transition: 0.3s;
+      box-shadow: 0 0 20px 2px #C7C7C7;
+    }
+  }
+}
+
+
+.post__link:hover .featured-post__title {
+  transition: 0.3s;
+  color: $linkHoverBg;
+}
+
+.featured-post_image {
+  max-width: 460px;
+  width: 100%;
+}
+
+.featured-post__title {
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 111.111% */
+  margin-bottom: 6px;
+  font-family: "Lora", sans-serif;
+  transition: 0.3s;
+}
+
+.featured-post__description {
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 178.571% */
+  margin-bottom: 12px;
+}
+
+.featured-post__author {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.author__avatar-name {
+  display: flex;
+  align-items: center;
+}
+
+.author__name {
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 291.667% */
+  margin-left: 10px;
+  max-width: 150px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.post__date {
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 291.667% */
+}
