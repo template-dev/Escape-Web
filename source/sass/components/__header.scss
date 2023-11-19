@@ -1,7 +1,8 @@
 .header {
   padding: 17px 10px;
   min-height: 500px;
-  background: url("@img/IMAGE.webp") #dcdcdc;
+  background-image: url('@img/IMAGE.webp');
+  background-color: #242424;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -24,7 +25,8 @@
   only screen and (min-device-pixel-ratio: 2),
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
-    background: url("@img/IMAGE@2x.webp") #dcdcdc;
+    background-image: url('@img/IMAGE@2x.webp');
+    background-color: #242424;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -135,9 +137,29 @@
     font-size: 14px;
     margin-left: 0px;
 
+    &::before {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      bottom: -10px;
+      opacity: 0;
+      left: 50%;
+      border-radius: 50%;
+      background-color: $linkHoverBg;
+      transition: 0.3s;
+    }
+
     &:hover {
         color: $linkHoverBg;
         transition: 0.3s;
+
+        &::before {
+          bottom: 0;
+          opacity: 1;
+          background-color: $linkHoverBg;
+          transition: 0.3s;
+        }
 
         &::after {
           content: "";

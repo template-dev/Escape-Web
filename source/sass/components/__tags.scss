@@ -24,14 +24,10 @@
   @media(min-width: $tablet-width) {
     grid-template-columns: repeat(6, auto);
   }
-
-  /*@media(min-width: 940px) {
-    grid-template-columns: repeat(6, auto);
-  }*/
 }
 
 .tags__item {
-  padding: 13px 35px;
+  padding: 13px 0;
   gap: 21px;
   flex-grow: 1;
   color: $tagsColor;
