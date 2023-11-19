@@ -1,12 +1,11 @@
 .featured-posts {
-  background-color: $featuredPostsBg;
-}
-
-.featured-wrapper {
   padding: 60px 10px 0 10px;
 
   hr {
     width: 188px;
+    height: 1px;
+    background-color: $titleSeparatorBg;
+    border: none;
   }
 
   @media(min-width: $tablet-width) {
@@ -36,7 +35,8 @@
   gap: 20px;
 
   @media(min-width: $tablet-width) {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
   }
 }
 
@@ -75,7 +75,6 @@
   }
 }
 
-
 .post__link:hover .featured-post__title {
   transition: 0.3s;
   color: $linkHoverBg;
@@ -86,12 +85,25 @@
   width: 100%;
 }
 
+.featured-post__tag {
+  font-size: 12px;
+  color: $featuredAuthorBorderColor;
+  text-transform: uppercase;
+  padding: 6px 9px;
+  border-radius: 2px;
+  background-color: $linkHoverBg;
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 20px;
+}
+
 .featured-post__title {
   font-size: 27px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px; /* 111.111% */
-  margin-bottom: 6px;
+  margin-bottom: -6px;
   font-family: "Lora", sans-serif;
   transition: 0.3s;
 }
@@ -102,7 +114,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 25px; /* 178.571% */
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .featured-post__author {
@@ -122,10 +134,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 35px; /* 291.667% */
-  margin-left: 10px;
   max-width: 150px;
   width: 100%;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
 .post__date {
