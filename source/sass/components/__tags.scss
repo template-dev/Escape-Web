@@ -12,22 +12,22 @@
 
 .tags__list {
   display: grid;
-  grid-template-columns: repeat(1, auto);
+  grid-template-columns: repeat(2, auto);
   list-style-type: none;
   padding: 0;
   margin: 0;
 
-  @media(min-width: 400px) {
-    grid-template-columns: repeat(2, auto);
+  @media(max-width: 319px) {
+    grid-template-columns: repeat(1, auto);
   }
 
   @media(min-width: $tablet-width) {
-    grid-template-columns: repeat(3, auto);
-  }
-
-  @media(min-width: $desktop-width) {
     grid-template-columns: repeat(6, auto);
   }
+
+  /*@media(min-width: 940px) {
+    grid-template-columns: repeat(6, auto);
+  }*/
 }
 
 .tags__item {
