@@ -1,8 +1,4 @@
 .featured-posts {
-  background-color: $featuredPostsBg;
-}
-
-.featured-wrapper {
   padding: 60px 10px 0 10px;
 
   hr {
@@ -123,10 +119,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 35px; /* 291.667% */
-  margin-left: 10px;
   max-width: 150px;
   width: 100%;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
 .post__date {

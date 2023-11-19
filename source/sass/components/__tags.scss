@@ -22,12 +22,12 @@
   }
 
   @media(min-width: $tablet-width) {
-    grid-template-columns: repeat(3, auto);
-  }
-
-  @media(min-width: $desktop-width) {
     grid-template-columns: repeat(6, auto);
   }
+
+  /*@media(min-width: 940px) {
+    grid-template-columns: repeat(6, auto);
+  }*/
 }
 
 .tags__item {

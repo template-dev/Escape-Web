@@ -4,6 +4,10 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 
+.content-block {
+  background-color: $featuredPostsBg;
+}
+
 .visually__hidden {
   position: absolute;
   width: 1px;
