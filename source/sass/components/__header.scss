@@ -58,7 +58,7 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   row-gap: 17px;
   flex-direction: column;
@@ -105,30 +105,70 @@
   font-size: 18px;
   text-transform: uppercase;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: transparent;
+    border-top: 1px solid $linkHoverBg;
+    border-bottom: 1px solid $linkHoverBg;
+    border-left: 1px solid $linkHoverBg;
+    transition: 0.3s;
+  }
+
   &::after {
     content: "";
     position: absolute;
     width: 0;
-    height: 1px;
-    bottom: 5px;
-    left: 0;
-    background: $linkHoverBg;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    background-color: transparent;
+    border-top: 1px solid $linkHoverBg;
+    border-bottom: 1px solid $linkHoverBg;
+    border-left: 1px solid $linkHoverBg;
     transition: 0.3s;
+    transform: rotate(-180deg);
   }
 
-  &:hover {
+  &:focus {
     color: $linkHoverBg;
     transition: 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      background-color: transparent;
+      border-top: 1px solid $linkHoverBg;
+      border-bottom: 1px solid $linkHoverBg;
+      border-left: 1px solid $linkHoverBg;
+      transition: 0.3s;
+    }
 
     &::after {
       content: "";
       position: absolute;
-      width: 100%;
-      height: 1px;
-      bottom: 5px;
-      left: 0;
-      background: $linkHoverBg;
+      width: 20%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      opacity: 1;
+      background-color: transparent;
+      border-top: 1px solid $linkHoverBg;
+      border-bottom: 1px solid $linkHoverBg;
+      border-left: 1px solid $linkHoverBg;
       transition: 0.3s;
+      transform: rotate(-180deg);
     }
   }
 
@@ -138,40 +178,71 @@
     margin-left: 0px;
 
     &::before {
-      position: absolute;
       content: "";
-      width: 6px;
-      height: 6px;
-      bottom: -10px;
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
       opacity: 0;
-      left: 50%;
-      border-radius: 50%;
-      background-color: $linkHoverBg;
+      background-color: transparent;
+      border-top: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
       transition: 0.3s;
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      background-color: transparent;
+      border-top: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      transition: 0.3s;
+      transform: rotate(-180deg);
+    }
+
     &:hover {
-        color: $linkHoverBg;
+      color: #ffffff;
+      transition: 0.3s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        background-color: transparent;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
         transition: 0.3s;
-
-        &::before {
-          bottom: 0;
-          opacity: 1;
-          background-color: $linkHoverBg;
-          transition: 0.3s;
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 1px;
-          bottom: 5px;
-          left: 0;
-          background: $linkHoverBg;
-          transition: 0.3s;
-        }
       }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        opacity: 1;
+        background-color: transparent;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        transition: 0.3s;
+        transform: rotate(-180deg);
+      }
+    }
   }
 }
 
