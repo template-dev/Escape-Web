@@ -1,3 +1,2 @@
 [build]
-  command = "npm run start"  # Или команда для запуска вашей сборки
-  publish = "build"          # Или папка, в которой содержатся файлы для развертывания
+  command = "npm run start"
