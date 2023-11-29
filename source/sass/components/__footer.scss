@@ -120,7 +120,7 @@
   padding-left: 10px;
   padding-right: 10px;
 
-  @media (min-width: ) {
+  @media (min-width: $tablet-width) {
     justify-content: space-between;
   }
   
