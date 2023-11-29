@@ -1,0 +1,3 @@
+[submodule "Escape-Web"]
+    path = Escape-Web
+    url = https://github.com/template-dev/Escape-Web.git
