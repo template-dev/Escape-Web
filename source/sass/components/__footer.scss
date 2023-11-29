@@ -120,6 +120,10 @@
   padding-left: 10px;
   padding-right: 10px;
 
+  @media (min-width: ) {
+    justify-content: space-between;
+  }
+  
   @media (min-width: 940px) {
     max-width: 940px;
     width: 100%;
@@ -135,7 +139,7 @@
     fill: #ffffff;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: 940px) {
     margin-top: 0;
   }
 }
