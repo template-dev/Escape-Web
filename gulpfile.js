@@ -160,3 +160,25 @@ export function runDev (done) {
     watchFiles
   )(done);
 }
+
+export function buildProject() {
+  return gulp.series(
+    processMarkup,
+    processStyles,
+    processScripts,
+    optimizeVector,
+    createStack,
+    copyAssets,
+    optimizeImages,
+    createWebp
+  )();
+}
+
+export function startDevServer(done) {
+  gulp.series(
+    deleteBuild,
+    buildProject,
+    startServer,
+    watchFiles
+  )(done);
+}
