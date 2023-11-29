@@ -130,8 +130,13 @@
 }
 
 .footer__logo {
+  margin-top: 20px;
   svg {
     fill: #ffffff;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
   }
 }
 
