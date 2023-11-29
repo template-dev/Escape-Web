@@ -161,7 +161,7 @@ export function runDev (done) {
   )(done);
 }
 
-export function buildProject() {
+export function buildProject(done) {
   return gulp.series(
     processMarkup,
     processStyles,
@@ -171,7 +171,7 @@ export function buildProject() {
     copyAssets,
     optimizeImages,
     createWebp
-  )();
+  )(done);
 }
 
 export function startDevServer(done) {
