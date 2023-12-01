@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  flex: 0 0 auto;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min--moz-device-pixel-ratio: 2),
@@ -124,7 +125,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   @media (min-width: 940px) {
     max-width: 940px;
     width: 100%;

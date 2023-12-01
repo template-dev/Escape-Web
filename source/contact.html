@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@@include('html/__head.html', {
+"title": "Escape"
+})
+
+<body>
+  <h1 class="visually__hidden">Escape Contact</h1>
+  @@include('html/__header.html', {})
+  <main class="content-block">
+    <p class="contact__title content__title">Contact</p>
+    <hr>
+    <div class="content-wrapper">
+      <form class="contact__form" action="">
+        <input placeholder="First name" type="text" required>
+        <input placeholder="Last name" type="text" required>
+        <input placeholder="Email" type="email" required>
+        <input placeholder="Phone" type="phone" required>
+        <textarea name="" id="" placeholder="Type your message here" cols="30" rows="10"></textarea>
+        <button>Submit</button>
+      </form>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193596.00927566906!2d-74.14448686377237!3d40.69737092183334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1701453849249!5m2!1sru!2sru"
+        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </main>
+  @@include('html/__footer.html', {})
+</body>
+
+</html>
