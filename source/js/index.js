@@ -25,3 +25,36 @@ function accordionToggle() {
   }
 }
 accordionToggle();
+
+const filterListButton = document.querySelector(".cards-list__button");
+const filterCardsButton = document.querySelector(".cards__button");
+const postsItemsArr = document.querySelectorAll(".post-page__item");
+
+function filterCardsRenderer() {
+  if (filterListButton && filterCardsButton) {
+    filterListButton.addEventListener("click", () => {
+      filterCardsButton.classList.remove("cards__button--active");
+      filterCardsButton.classList.add("cards__button--inactive");
+      filterListButton.classList.toggle("cards-list__button--inactive");
+      filterListButton.classList.toggle("cards-list__button--active");
+
+      for(let item of postsItemsArr) {
+        item.classList.add("post__item--list");
+        item.classList.remove("post__item--cards");
+      }
+    });
+
+    filterCardsButton.addEventListener("click", () => {
+      filterListButton.classList.remove("cards-list__button--active");
+      filterListButton.classList.add("cards-list__button--inactive");
+      filterCardsButton.classList.toggle("cards__button--inactive");
+      filterCardsButton.classList.toggle("cards__button--active");
+
+      for(let item of postsItemsArr) {
+        item.classList.remove("post__item--list");
+        item.classList.add("post__item--cards");
+      }
+    });
+  }
+}
+filterCardsRenderer();
