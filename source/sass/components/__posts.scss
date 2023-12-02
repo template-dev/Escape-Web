@@ -244,6 +244,13 @@
     figure {
       display: flex;
 
+      figcaption {
+        flex-grow: 1;
+        .post-page__info {
+          flex-grow: 1;
+        }
+      }
+
       .post-page__image {
         max-width: 400px;
         width: 100%;
