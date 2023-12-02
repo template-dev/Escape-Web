@@ -234,6 +234,10 @@
 
   figure {
     display: grid;
+
+    figcaption {
+      margin-top: 4px;
+    }
   }
 
   @media (min-width: $tablet-width) {
