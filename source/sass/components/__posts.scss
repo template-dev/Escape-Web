@@ -1,0 +1,255 @@
+.posts-page {
+  @media(min-width: $tablet-width) {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.posts-page__list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 24px;
+
+  @media(min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+  }
+
+  @media(min-width: 940px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.post-page__item {
+  padding: 0;
+  margin: 0;
+  background-color: $recentItemBg;
+
+  figure {
+    padding: 0;
+    margin: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.post-page__info {
+  padding: 10px 13px 0 13px;
+  flex-grow: 1;
+}
+
+.post-page__author {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $recentAuthorBorderColor;
+  padding: 0 13px;
+
+}
+
+.post-page-item__title {
+  text-decoration: none;
+  transition: 0.3s;
+  color: $recentItemTitleColor;
+  font-family: "Lora", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  /* 131.25% */
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: $linkHoverBg;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    transition: 0.3s;
+    color: $linkHoverBg;
+
+    &::after {
+      width: 100%;
+      transition: 0.3s;
+    }
+  }
+}
+
+.post-page-item__description {
+  color: $recentItemDescription;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  /* 146.154% */
+}
+
+.post-page-author__name {
+  color: $recentAuthorNameColor;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  /* 318.182% */
+  margin-left: 10px;
+}
+
+.post-page__date {
+  color: $recentAuthorNameColor;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  /* 291.667% */
+}
+
+.post-page-author__avatar-name {
+  display: grid;
+  grid-template-columns: 26px 188px;
+  align-items: center;
+  width: 188px;
+
+  img {
+    height: auto;
+  }
+}
+
+.load-more__button {
+  padding: 12px 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  cursor: pointer;
+  border: 1px solid $linkHoverBg;
+  color: $linkHoverBg;
+  background: transparent;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: $linkHoverBg;
+    color: #ffffff;
+  }
+}
+
+.filter__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    svg {
+      transition: 0.3s
+    }
+
+    &:hover {
+      transition: 0.3s;
+      background-color: $linkHoverBg;
+      border-color: $linkHoverBg;
+
+      svg {
+        transition: 0.3s;
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.cards-list__button {
+  &:hover {
+    svg {
+      stroke: #ffffff;
+    }
+  }
+
+  svg {
+    stroke: #242424;
+  }
+}
+
+.cards-list__button--active {
+  background-color: darken($linkHoverBg, 10%);
+  border: 1px solid $linkHoverBg;
+
+  svg {
+    stroke: #ffffff;
+    fill: #ffffff;
+  }
+}
+
+.cards-list__button--inactive {
+  background: transparent;
+  border: 1px solid #242424;
+
+  svg {
+    fill: #242424;
+  }
+}
+
+.cards__button--active {
+  background-color: darken($linkHoverBg, 10%);
+  border: 1px solid $linkHoverBg;
+
+  svg {
+    fill: #ffffff;
+  }
+}
+
+.cards__button--inactive {
+  background: transparent;
+  border: 1px solid #242424;
+
+  svg {
+    fill: #242424;
+  }
+}
+
+.post__item--list {
+  grid-column: 1 / -1;
+  transition: 0.3s;
+
+  figure {
+    display: grid;
+  }
+
+  @media (min-width: $tablet-width) {
+    figure {
+      display: flex;
+
+      .post-page__image {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.post__item--card {
+  grid-column: 1 / 1;
+  transition: 0.3s;
+}
